@@ -28,7 +28,8 @@ export const buttonVariants = cva(
           "border border-foreground/15",
           "hover:border-foreground/25 hover:text-foreground",
         ].join(" "),
-        ghost: "bg-transparent text-muted hover:bg-foreground/5 hover:text-foreground",
+        ghost:
+          "bg-transparent text-muted hover:bg-foreground/5 hover:text-foreground",
         accent:
           "bg-accent text-background hover:bg-accent/90 active:bg-accent/80",
       },

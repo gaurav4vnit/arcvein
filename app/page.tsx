@@ -1,14 +1,15 @@
-import { ArcVeinWay } from "@/components/arcvein-way";
-import { Capabilities } from "@/components/capabilities";
-import { Hero } from "@/components/hero";
-import { HowWeThink } from "@/components/how-we-think";
-import { HowWeWork } from "@/components/how-we-work";
-import { SiteHeader } from "@/components/site-header";
+import { ArcVeinWay } from "@/components/home/ArcVeinWay";
+import { Capabilities } from "@/components/home/Capabilities";
+import { Hero } from "@/components/home/Hero";
+import { HowWeThink } from "@/components/home/HowWeThink";
+import { HowWeWork } from "@/components/home/HowWeWork";
+import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Navbar";
 
 export default function Home() {
   return (
     <>
-      <SiteHeader />
+      <Navbar />
       <main className="flex flex-1 flex-col">
         <Hero />
         <ArcVeinWay />
@@ -16,6 +17,7 @@ export default function Home() {
         <HowWeWork />
         <Capabilities />
       </main>
+      <Footer />
     </>
   );
 }

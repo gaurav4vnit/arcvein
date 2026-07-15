@@ -54,11 +54,9 @@ export function TimelineStep({
     <li
       className={cn(
         "group relative flex flex-col",
-        // Mobile vertical connector
         !isLast &&
           "border-l border-foreground/[0.1] pb-12 pl-6 transition-[border-color] duration-200 hover:border-foreground/25 sm:pl-8 sm:pb-14",
         isLast && "border-l border-transparent pl-6 sm:pl-8",
-        // Desktop: drop vertical border, use horizontal rhythm
         "lg:border-l-0 lg:pb-0 lg:pl-0 lg:pr-8 xl:pr-10",
         "lg:last:pr-0",
         className,
@@ -69,7 +67,6 @@ export function TimelineStep({
           {step}
         </span>
 
-        {/* Desktop horizontal connector */}
         {!isLast && (
           <span
             aria-hidden="true"

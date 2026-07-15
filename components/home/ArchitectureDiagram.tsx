@@ -45,20 +45,19 @@ export function ArchitectureDiagram({ className }: ArchitectureDiagramProps) {
       >
         <title>System architecture</title>
 
-        <g stroke="currentColor" className="text-foreground/[0.09]" strokeWidth="1">
+        <g
+          stroke="currentColor"
+          className="text-foreground/[0.09]"
+          strokeWidth="1"
+        >
           {connectors.map((connector) => (
             <path key={connector.id} d={connector.d} />
           ))}
         </g>
 
-        {/* Near-invisible data packets along connectors */}
         <g className="arch-packets">
           {packets.map((packet) => (
-            <circle
-              key={packet.id}
-              r="1.75"
-              className="fill-primary/25"
-            >
+            <circle key={packet.id} r="1.75" className="fill-primary/25">
               <animateMotion
                 path={packet.path}
                 dur={`${packet.duration}s`}

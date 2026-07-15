@@ -1,12 +1,12 @@
 import Link from "next/link";
 
+import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/lib/site";
-import { Container } from "@/ui/container";
 
-export function SiteHeader() {
+export function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-background">
-      <Container className="flex h-16 max-w-7xl items-center justify-between sm:h-[4.25rem]">
+      <Container className="flex h-16 items-center justify-between sm:h-[4.25rem]">
         <Link
           href="/"
           className="font-heading text-sm font-normal tracking-tight text-foreground/90 transition-colors hover:text-foreground"
