@@ -54,6 +54,22 @@
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-primary;
   }
+
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+}
+
+/* Skip link — keyboard accessibility */
+@layer components {
+  .skip-link {
+    @apply sr-only;
+  }
+
+  .skip-link:focus {
+    @apply not-sr-only fixed top-3 left-3 z-[100] rounded-md bg-surface px-4 py-2.5 text-sm font-medium text-foreground outline-2 outline-offset-2 outline-primary;
+  }
 }
 
 /* Engineering grid — barely visible */
@@ -78,5 +94,9 @@
 @media (prefers-reduced-motion: reduce) {
   .arch-packets {
     display: none;
+  }
+
+  html {
+    scroll-behavior: auto;
   }
 }

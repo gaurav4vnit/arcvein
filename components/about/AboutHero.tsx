@@ -9,7 +9,7 @@ export function AboutHero() {
       bordered={false}
       spacing="none"
       labelledBy="about-hero-heading"
-      containerClassName="pt-14 pb-20 sm:pt-16 sm:pb-24 lg:pt-20 lg:pb-28"
+      containerClassName="pt-12 pb-16 sm:pt-16 sm:pb-24 lg:pt-20 lg:pb-28"
     >
       <h1
         id="about-hero-heading"

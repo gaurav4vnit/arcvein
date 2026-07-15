@@ -1,26 +1,19 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
-
+import { FadeIn } from "@/components/ui/FadeIn";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Timeline } from "@/components/ui/Timeline";
-import { motionEase } from "@/lib/motion";
+import { motionDelay } from "@/lib/motion";
 import { homeContent } from "@/lib/site";
 
 export function HowWeWork() {
-  const reduceMotion = useReducedMotion();
   const { howWeWork } = homeContent;
   const headingId = "how-we-work-heading";
 
   return (
     <Section labelledBy={headingId}>
-      <motion.div
-        initial={reduceMotion ? false : { opacity: 0, y: 14 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.6, ease: motionEase }}
-      >
+      <FadeIn>
         <SectionHeading
           id={headingId}
           title={howWeWork.title}
@@ -28,21 +21,11 @@ export function HowWeWork() {
         >
           {howWeWork.subtitle}
         </SectionHeading>
-      </motion.div>
+      </FadeIn>
 
-      <motion.div
-        className="mt-20 sm:mt-24 lg:mt-28"
-        initial={reduceMotion ? false : { opacity: 0, y: 18 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-60px" }}
-        transition={{
-          duration: 0.65,
-          delay: reduceMotion ? 0 : 0.08,
-          ease: motionEase,
-        }}
-      >
+      <FadeIn className="mt-20 sm:mt-24 lg:mt-28" delay={motionDelay.short} y={18}>
         <Timeline steps={howWeWork.steps} />
-      </motion.div>
+      </FadeIn>
     </Section>
   );
 }

@@ -9,7 +9,7 @@ export function ServicesHero() {
       bordered={false}
       spacing="none"
       labelledBy="services-hero-heading"
-      containerClassName="pt-14 pb-20 sm:pt-16 sm:pb-24 lg:pt-20 lg:pb-28"
+      containerClassName="pt-12 pb-16 sm:pt-16 sm:pb-24 lg:pt-20 lg:pb-28"
     >
       <p className="font-mono text-[13px] tracking-wide text-muted">
         {hero.eyebrow}

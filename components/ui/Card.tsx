@@ -18,7 +18,7 @@ export function Card({
   return (
     <Component
       className={cn(
-        "group flex flex-col border border-foreground/[0.1] bg-transparent p-7 sm:p-8",
+        "group flex flex-col border border-foreground/[0.1] bg-transparent p-6 sm:p-7 md:p-8",
         "transition-[border-color,background-color,transform] duration-200 ease-out",
         "hover:-translate-y-px hover:border-foreground/20 hover:bg-surface/40",
         "focus-within:border-foreground/20 focus-within:bg-surface/40",

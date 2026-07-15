@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { NavLinks } from "@/components/layout/NavLinks";
 import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/lib/site";
 
@@ -13,12 +14,12 @@ export function Footer() {
         className="pointer-events-none absolute inset-0 engineering-grid"
       />
 
-      <Container className="relative py-14 sm:py-16">
+      <Container className="relative py-12 sm:py-14 md:py-16">
         <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
           <div className="max-w-sm">
             <Link
               href="/"
-              className="font-heading text-sm font-normal tracking-tight text-foreground/90 transition-colors hover:text-foreground"
+              className="font-heading text-sm font-normal tracking-tight text-foreground/90 transition-colors duration-200 hover:text-foreground"
             >
               {siteConfig.name}
             </Link>
@@ -27,20 +28,13 @@ export function Footer() {
             </p>
           </div>
 
-          <nav aria-label="Footer" className="flex flex-wrap gap-x-8 gap-y-3">
-            {siteConfig.nav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-[13px] tracking-wide text-muted/80 transition-colors hover:text-foreground"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+          <NavLinks
+            ariaLabel="Footer"
+            className="flex flex-wrap gap-x-6 gap-y-3 sm:gap-x-8"
+          />
         </div>
 
-        <p className="mt-12 text-[13px] text-muted/60">
+        <p className="mt-10 text-[13px] text-muted/60 sm:mt-12">
           © {year} {siteConfig.name}
         </p>
       </Container>

@@ -4,6 +4,13 @@ export const siteConfig = {
   description:
     "ArcVein builds critical software — reliable systems for teams that cannot afford to fail.",
   url: "https://arcvein.com",
+  email: "hello@arcvein.com",
+  social: {
+    linkedin: {
+      label: "linkedin.com/company/arcvein",
+      href: "https://linkedin.com/company/arcvein",
+    },
+  },
   links: {
     services: "/services",
     engineering: "/engineering",
@@ -19,6 +26,11 @@ export const siteConfig = {
 } as const;
 
 export const homeContent = {
+  meta: {
+    title: "ArcVein",
+    description:
+      "ArcVein partners with ambitious startups to build backend platforms, AI systems and high-performance infrastructure with engineers who think like owners.",
+  },
   hero: {
     headline: ["Build", "Critical", "Software."] as const,
     description:
@@ -307,5 +319,54 @@ export const aboutContent = {
   cta: {
     headline: "Let's build software that lasts.",
     button: "Book a Call",
+  },
+} as const;
+
+export const contactContent = {
+  meta: {
+    title: "Contact",
+    description:
+      "Tell ArcVein about your platform, product or engineering challenge. Usually replies within one business day.",
+  },
+  hero: {
+    headline: "Let's Build Something That Lasts.",
+    description:
+      "Whether you're building a new platform, scaling an existing product or solving difficult engineering problems, we'd love to hear about it.",
+  },
+  form: {
+    nameLabel: "Name",
+    emailLabel: "Work Email",
+    companyLabel: "Company",
+    companyOptional: "optional",
+    projectLabel: "Tell us about your project",
+    submitLabel: "Start the Conversation",
+  },
+  nextSteps: {
+    title: "What Happens Next",
+    steps: [
+      {
+        step: "1",
+        lines: ["We'll read your message carefully."],
+      },
+      {
+        step: "2",
+        lines: [
+          "If we're a good fit,",
+          "we'll schedule an introductory call.",
+        ],
+      },
+      {
+        step: "3",
+        lines: [
+          "We'll discuss architecture,",
+          "scope and next steps.",
+        ],
+      },
+    ],
+  },
+  details: {
+    emailLabel: "Email",
+    linkedinLabel: "LinkedIn",
+    note: "Usually replies within one business day.",
   },
 } as const;
