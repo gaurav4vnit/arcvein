@@ -237,3 +237,75 @@ export const servicesContent = {
     button: "Book a Call",
   },
 } as const;
+
+export const aboutContent = {
+  meta: {
+    title: "About",
+    description:
+      "ArcVein exists to change how critical software is designed and built — with production-ready systems, senior ownership and long-term thinking.",
+  },
+  hero: {
+    title: "Why ArcVein Exists",
+    body: [
+      "Most software projects fail long before production.",
+      "Not because engineers cannot code.",
+      "Because systems are poorly designed.",
+      "ArcVein exists to change that.",
+    ] as const,
+  },
+  beliefs: {
+    title: "What We Believe",
+    items: [
+      {
+        title: "Build for production.",
+        body: [
+          "Software should survive real users, real traffic and real failures.",
+        ],
+      },
+      {
+        title: "Simplicity scales.",
+        body: ["Complexity compounds.", "Simple systems survive."],
+      },
+      {
+        title: "Performance matters.",
+        body: [
+          "Not because benchmarks matter.",
+          "Because users notice.",
+        ],
+      },
+      {
+        title: "Engineers own outcomes.",
+        body: ["Not tickets.", "Not hours.", "Outcomes."],
+      },
+      {
+        title: "Long-term thinking.",
+        body: [
+          "Today's shortcut becomes tomorrow's technical debt.",
+        ],
+      },
+    ],
+  },
+  audience: {
+    title: "Who We Work With",
+    items: [
+      "Technical founders",
+      "Engineering managers",
+      "CTOs",
+      "Product companies",
+      "Growing startups",
+    ],
+  },
+  notThis: {
+    title: "What We Don't Do",
+    items: [
+      "We don't sell junior teams.",
+      "We don't outsource communication.",
+      "We don't promise impossible timelines.",
+      "We don't build software we wouldn't maintain ourselves.",
+    ],
+  },
+  cta: {
+    headline: "Let's build software that lasts.",
+    button: "Book a Call",
+  },
+} as const;
