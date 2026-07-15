@@ -165,3 +165,75 @@ export const homeContent = {
     ],
   },
 } as const;
+
+export const servicesContent = {
+  meta: {
+    title: "Services",
+    description:
+      "ArcVein helps ambitious companies design, build and scale backend platforms, AI infrastructure and performance-critical software.",
+  },
+  hero: {
+    eyebrow: "Services",
+    headline: "Engineering for systems that matter.",
+    description:
+      "ArcVein helps ambitious companies design, build and scale backend platforms, AI infrastructure and performance-critical software.",
+  },
+  offerings: [
+    {
+      name: "High Performance Systems",
+      headline:
+        "When latency, throughput and reliability are product requirements.",
+      body: "We design and build performance-critical systems using modern C++, Linux, concurrency, networking and careful systems architecture.",
+      focus: [
+        "Low-latency systems",
+        "Trading and market-data infrastructure",
+        "Concurrency and multithreading",
+        "Network programming",
+        "Performance profiling and optimization",
+      ],
+    },
+    {
+      name: "Backend Platforms",
+      headline: "Reliable foundations for products that need to scale.",
+      body: "We build backend systems that remain understandable, observable and dependable as products and teams grow.",
+      focus: [
+        "Distributed systems",
+        "APIs and service architecture",
+        "Event-driven systems",
+        "PostgreSQL, Kafka and Redis",
+        "Reliability and observability",
+      ],
+    },
+    {
+      name: "AI Infrastructure",
+      headline: "Production AI beyond the prototype.",
+      body: "We integrate AI into real products with reliable backend services, retrieval systems, inference workflows and operational visibility.",
+      focus: [
+        "LLM integration",
+        "RAG systems",
+        "Inference services",
+        "Vector search",
+        "AI platform backends",
+      ],
+    },
+    {
+      name: "Cloud Platforms",
+      headline: "Infrastructure designed for production, not demos.",
+      body: "We help teams deploy and operate software using pragmatic cloud architecture, automation and observability.",
+      focus: [
+        "AWS",
+        "Docker and Kubernetes",
+        "CI/CD",
+        "Monitoring and observability",
+        "Production operations",
+      ],
+    },
+  ],
+  cta: {
+    headline:
+      "Need senior engineering capability without building a large team?",
+    description:
+      "Work with ArcVein through dedicated engineers, project delivery or a long-term engineering partnership.",
+    button: "Book a Call",
+  },
+} as const;
