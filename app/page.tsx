@@ -1,6 +1,8 @@
 import { ArcVeinWay } from "@/components/arcvein-way";
+import { Capabilities } from "@/components/capabilities";
 import { Hero } from "@/components/hero";
 import { HowWeThink } from "@/components/how-we-think";
+import { HowWeWork } from "@/components/how-we-work";
 import { SiteHeader } from "@/components/site-header";
 
 export default function Home() {
@@ -11,6 +13,8 @@ export default function Home() {
         <Hero />
         <ArcVeinWay />
         <HowWeThink />
+        <HowWeWork />
+        <Capabilities />
       </main>
     </>
   );
