@@ -88,10 +88,6 @@ export function ReferenceArchitectures() {
               <p className="mt-4 max-w-xl leading-7 text-muted">
                 {architecture.description}
               </p>
-
-              <p className="mt-8 text-sm font-medium text-muted">
-                Detailed architecture coming soon
-              </p>
             </article>
           ))}
         </div>
