@@ -18,10 +18,30 @@ export const siteConfig = {
     contact: "/contact",
   },
   nav: [
-    { label: "Services", href: "/services" },
-    { label: "Capabilities", href: "/capabilities" },
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
+    {
+      label: "Solutions",
+      href: "/services",
+    },
+    {
+      label: "Engineering Teams",
+      href: "/engineering-teams",
+    },
+    {
+      label: "Trading Architecture",
+      href: "/architectures/low-latency-trading-platform",
+    },
+    {
+      label: "Open Source",
+      href: "/#open-source",
+    },
+    {
+      label: "About",
+      href: "/about",
+    },
+    {
+      label: "Contact",
+      href: "/contact",
+    },
   ],
 } as const;
 

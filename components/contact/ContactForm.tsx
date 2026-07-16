@@ -6,7 +6,7 @@ import {
 } from "react";
 
 import { Button } from "@/components/ui/Button";
-import { TextArea, TextField } from "@/components/ui/Field";
+import { FieldLabel, TextArea, TextField } from "@/components/ui/Field";
 
 type FormStatus =
   | { state: "idle" }
@@ -108,6 +108,39 @@ export function ContactForm() {
         placeholder="Founder, CTO, Engineering Manager..."
         maxLength={150}
       />
+
+
+      <div>
+        <FieldLabel htmlFor="helpType">How can we help?</FieldLabel>
+
+        <select
+          id="helpType"
+          name="helpType"
+          required
+          defaultValue=""
+          className="w-full rounded-md border border-foreground/15 bg-background px-4 py-3 text-[15px] text-foreground transition-[border-color,box-shadow] duration-200 hover:border-foreground/25 focus-visible:border-primary/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+        >
+          <option value="" disabled>
+            Select an engagement
+          </option>
+          <option value="Dedicated engineering team">
+            Dedicated engineering team
+          </option>
+          <option value="Staff augmentation">
+            Staff augmentation
+          </option>
+          <option value="Trading platform development">
+            Trading platform development
+          </option>
+          <option value="Architecture review">
+            Trading architecture review
+          </option>
+          <option value="Platform modernization">
+            Trading platform modernization
+          </option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
 
       <TextField
         id="team"

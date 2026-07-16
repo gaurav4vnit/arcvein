@@ -9,6 +9,7 @@ import { OpenSourceEngineering } from "@/components/home/OpenSourceEngineering";
 import { ReferenceArchitectures } from "@/components/home/ReferenceArchitectures";
 import { WhoWeHelp } from "@/components/home/WhoWeHelp";
 import { WhyArcVein } from "@/components/home/WhyArcVein";
+import { CommonEngineeringChallenges } from "@/components/home/CommonEngineeringChallenges";
 import { SiteShell } from "@/components/layout/SiteShell";
 import { createPageMetadata } from "@/lib/metadata";
 
@@ -26,6 +27,7 @@ export default function Home() {
       <Hero />
       <WhoWeHelp />
       <DedicatedEngineeringTeams />
+      <CommonEngineeringChallenges />
       <Capabilities />
       <WhyArcVein />
       <ReferenceArchitectures />

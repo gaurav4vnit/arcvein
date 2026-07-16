@@ -16,6 +16,7 @@ const features = [
 export function OpenSourceEngineering() {
   return (
     <section
+      id="open-source"
       aria-labelledby="open-source-heading"
       className="border-b border-border/60 py-20 sm:py-28"
     >

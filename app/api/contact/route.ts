@@ -9,6 +9,7 @@ type ContactPayload = {
   role?: unknown;
   team?: unknown;
   timeline?: unknown;
+  helpType?: unknown;
   project?: unknown;
   website?: unknown;
 };
@@ -62,11 +63,12 @@ export async function POST(request: Request) {
     const role = text(payload.role, 150);
     const team = text(payload.team, 100);
     const timeline = text(payload.timeline, 150);
+    const helpType = text(payload.helpType, 150);
     const project = text(payload.project, 5000);
 
-    if (!name || !email || !project) {
+    if (!name || !email || !helpType || !project) {
       return Response.json(
-        { message: "Name, work email and project details are required." },
+        { message: "Name, work email, engagement type and project details are required." },
         { status: 400 },
       );
     }
@@ -110,6 +112,10 @@ export async function POST(request: Request) {
                 <td style="padding:10px;border-bottom:1px solid #e5e7eb">${escapeHtml(role || "Not provided")}</td>
               </tr>
               <tr>
+                <td style="padding:10px;border-bottom:1px solid #e5e7eb"><strong>How can ArcVein help?</strong></td>
+                <td style="padding:10px;border-bottom:1px solid #e5e7eb">${escapeHtml(helpType)}</td>
+              </tr>
+              <tr>
                 <td style="padding:10px;border-bottom:1px solid #e5e7eb"><strong>Team size</strong></td>
                 <td style="padding:10px;border-bottom:1px solid #e5e7eb">${escapeHtml(team || "Not provided")}</td>
               </tr>
@@ -131,6 +137,7 @@ export async function POST(request: Request) {
         `Email: ${email}`,
         `Company: ${company || "Not provided"}`,
         `Role: ${role || "Not provided"}`,
+        `Engagement: ${helpType}`,
         `Team size: ${team || "Not provided"}`,
         `Timeline: ${timeline || "Not provided"}`,
         "",
