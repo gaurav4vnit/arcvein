@@ -2,11 +2,13 @@ import { Container } from "@/components/ui/Container";
 
 const features = [
   "Modern C++",
-  "REST integration",
+  "REST APIs",
   "WebSocket market data",
-  "Authenticated order APIs",
   "Order management",
+  "Authentication",
   "Risk-aware structure",
+  "Docker",
+  "Unit tests",
 ];
 
 export function OpenSourceEngineering() {
@@ -19,7 +21,7 @@ export function OpenSourceEngineering() {
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <div>
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-              Open source engineering
+              Featured open source
             </p>
 
             <h2
@@ -31,7 +33,8 @@ export function OpenSourceEngineering() {
 
             <p className="mt-6 max-w-lg leading-7 text-muted">
               Our open-source work demonstrates the practical engineering
-              standards we bring to trading-platform engagements.
+              standards we bring to trading-platform and staff-augmentation
+              engagements.
             </p>
           </div>
 
@@ -43,7 +46,7 @@ export function OpenSourceEngineering() {
                 </p>
 
                 <h3 className="mt-5 text-2xl font-medium tracking-tight text-foreground">
-                  Delta Exchange Trading Bot
+                  Delta Exchange Trading Platform
                 </h3>
 
                 <p className="mt-2 text-sm text-muted">
@@ -57,9 +60,9 @@ export function OpenSourceEngineering() {
             </div>
 
             <p className="mt-7 max-w-2xl leading-7 text-muted">
-              A practical Delta Exchange integration demonstrating market-data
-              streaming, authenticated REST APIs, order handling and a clean
-              foundation for automated trading workflows.
+              A production-oriented reference implementation demonstrating
+              authenticated exchange connectivity, live market data, order
+              handling and a maintainable foundation for automated trading.
             </p>
 
             <div className="mt-8 grid border-l border-t border-border/60 sm:grid-cols-2">

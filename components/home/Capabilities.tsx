@@ -5,15 +5,15 @@ import { Container } from "@/components/ui/Container";
 const solutions = [
   {
     number: "01",
-    title: "Trading Platform Development",
+    title: "Dedicated Engineering Teams",
     description:
-      "Design and implementation of reliable trading platforms for listed markets, derivatives, digital assets and multi-asset workflows.",
+      "Experienced C++ and backend engineers integrated directly into your product team through contract and staff-augmentation engagements.",
   },
   {
     number: "02",
-    title: "Dedicated Engineering Teams",
+    title: "Trading Platform Development",
     description:
-      "Experienced C++ and backend engineers embedded into your organization through contract and staff-augmentation engagements.",
+      "End-to-end engineering for trading platforms covering execution, market data, order management, risk and operational tooling.",
   },
   {
     number: "03",
@@ -29,15 +29,15 @@ const solutions = [
   },
   {
     number: "05",
-    title: "OMS and Execution Systems",
+    title: "OMS and Risk Systems",
     description:
-      "Order lifecycle management, execution routing, state reconciliation and portfolio-facing trading workflows.",
+      "Order lifecycle management, execution routing, limits, exposure controls and position-aware trading workflows.",
   },
   {
     number: "06",
-    title: "Platform Modernization",
+    title: "Trading Platform Modernization",
     description:
-      "Incremental modernization of legacy trading infrastructure with careful attention to operational risk and continuity.",
+      "Incremental modernization of legacy trading infrastructure with careful attention to operational continuity and risk.",
   },
 ];
 
@@ -62,8 +62,8 @@ export function Capabilities() {
             </h2>
 
             <p className="mt-6 max-w-lg text-base leading-7 text-muted sm:text-lg">
-              Engage ArcVein for end-to-end delivery or add specialist trading
-              engineers to an existing team.
+              Engage ArcVein for complete platform delivery or strengthen your
+              existing team with specialist trading-technology engineers.
             </p>
 
             <Link
@@ -79,7 +79,7 @@ export function Capabilities() {
             {solutions.map((solution) => (
               <article
                 key={solution.title}
-                className="group border-b border-r border-border/60 p-6 transition-colors hover:bg-foreground/[0.025] sm:p-8"
+                className="group border-b border-r border-border/60 p-6 transition duration-200 hover:-translate-y-0.5 hover:bg-foreground/[0.025] sm:p-8"
               >
                 <span className="text-xs tabular-nums tracking-[0.16em] text-muted/70">
                   {solution.number}

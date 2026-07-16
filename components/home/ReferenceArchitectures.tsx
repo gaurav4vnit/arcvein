@@ -12,26 +12,26 @@ export function ReferenceArchitectures() {
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <div>
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-              Reference architecture
+              Trading architecture
             </p>
 
             <h2
               id="reference-architecture-heading"
               className="mt-5 max-w-xl text-3xl font-medium tracking-tight text-foreground sm:text-4xl"
             >
-              See how we reason about production trading systems.
+              See how we approach production-grade trading systems.
             </h2>
           </div>
 
           <div>
             <p className="max-w-2xl text-lg leading-8 text-muted">
-              Our interactive reference architecture covers market data,
-              strategy execution, order management, risk, exchange
-              connectivity, CPU placement and downstream systems.
+              Review the architecture before the engagement: critical path,
+              market data, strategies, OMS, risk, exchange connectivity, CPU
+              placement and downstream systems.
             </p>
 
             <p className="mt-5 max-w-2xl leading-7 text-muted">
-              It is representative engineering work—not a fictional client
+              This is representative engineering work—not a fictional client
               case study.
             </p>
           </div>
@@ -59,7 +59,7 @@ export function ReferenceArchitectures() {
             </div>
 
             <span className="text-sm font-medium text-foreground">
-              Explore architecture <span aria-hidden="true">→</span>
+              View architecture <span aria-hidden="true">→</span>
             </span>
           </div>
         </Link>

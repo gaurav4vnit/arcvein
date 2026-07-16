@@ -1,23 +1,23 @@
 import { Container } from "@/components/ui/Container";
 
-const principles = [
+const reasons = [
   {
     number: "01",
-    title: "Trading-domain understanding",
+    title: "Trading expertise",
     description:
-      "We understand market data, order lifecycles, execution workflows, risk controls and the operational realities of trading systems.",
+      "Experience across market data, execution workflows, order management, risk controls and capital-markets infrastructure.",
   },
   {
     number: "02",
-    title: "Engineering-first delivery",
+    title: "Flexible engagement",
     description:
-      "Architecture, reliability, performance and maintainability guide our decisions from the beginning.",
+      "Dedicated engineers, embedded project teams or complete platform delivery based on your roadmap and internal capacity.",
   },
   {
     number: "03",
-    title: "Flexible engagement",
+    title: "Long-term engineering",
     description:
-      "Work with ArcVein through project delivery, embedded engineers or a focused team assembled around your roadmap.",
+      "Small, experienced teams focused on reliability, maintainability, operational clarity and direct technical communication.",
   },
 ];
 
@@ -38,40 +38,41 @@ export function WhyArcVein() {
               id="why-arcvein-heading"
               className="mt-5 max-w-xl text-3xl font-medium tracking-tight text-foreground sm:text-4xl"
             >
-              Trading expertise without the weight of a generic consultancy.
+              Specialist trading engineering without the weight of a generic
+              consultancy.
             </h2>
           </div>
 
           <div>
             <p className="max-w-2xl text-lg leading-8 text-muted">
-              ArcVein combines trading-technology experience with the
-              flexibility of a focused engineering partner.
+              ArcVein helps organizations access trading-domain engineering
+              capability without building every specialist skill internally.
             </p>
 
             <p className="mt-5 max-w-2xl leading-7 text-muted">
-              Clients can engage us to deliver a system, modernize an existing
-              platform or add experienced C++ and backend engineers directly to
-              their teams.
+              We can extend an existing team, assemble a focused project team
+              or take responsibility for delivering a defined trading-platform
+              capability.
             </p>
           </div>
         </div>
 
         <div className="mt-14 grid border-l border-t border-border/60 md:grid-cols-3">
-          {principles.map((principle) => (
+          {reasons.map((reason) => (
             <article
-              key={principle.title}
-              className="border-b border-r border-border/60 p-7 transition-colors hover:bg-foreground/[0.025] sm:p-9"
+              key={reason.title}
+              className="border-b border-r border-border/60 p-7 transition duration-200 hover:-translate-y-0.5 hover:bg-foreground/[0.025] sm:p-9"
             >
               <span className="text-xs tabular-nums tracking-[0.16em] text-muted/70">
-                {principle.number}
+                {reason.number}
               </span>
 
               <h3 className="mt-9 text-lg font-medium tracking-tight text-foreground">
-                {principle.title}
+                {reason.title}
               </h3>
 
               <p className="mt-4 leading-7 text-muted">
-                {principle.description}
+                {reason.description}
               </p>
             </article>
           ))}

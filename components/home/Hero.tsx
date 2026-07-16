@@ -42,12 +42,13 @@ export function Hero() {
             duration: motionDuration.enter,
             ease: motionEase,
           }}
-          className="font-heading text-[clamp(3.25rem,9vw,7rem)] font-medium leading-[0.92] tracking-[-0.045em] text-foreground"
+          className="font-heading text-[clamp(3.25rem,9vw,6.75rem)] font-medium leading-[0.92] tracking-[-0.045em] text-foreground"
         >
-          <span className="block">Build Trading</span>
-          <span className="block">Platforms.</span>
+          <span className="block">Trading Platforms.</span>
+          <span className="block">Capital Markets</span>
+          <span className="block">Technology.</span>
           <span className="mt-2 block text-foreground/70">
-            Scale Engineering Teams.
+            Dedicated Engineering Teams.
           </span>
         </motion.h1>
 
@@ -59,13 +60,12 @@ export function Hero() {
             delay: reduceMotion ? 0 : motionDelay.medium,
             ease: motionEase,
           }}
-          className="mt-9 max-w-[36rem] text-[15px] leading-[1.75] text-muted sm:text-base"
+          className="mt-9 max-w-[38rem] text-[15px] leading-[1.75] text-muted sm:text-base"
         >
-          ArcVein helps trading firms, fintech companies and software
-          consultancies build trading platforms, market data systems, exchange
-          connectivity and capital markets infrastructure. We also provide
-          experienced engineering teams that integrate directly into existing
-          product organizations.
+          ArcVein designs and builds trading platforms, market-data systems,
+          exchange connectivity and capital-markets infrastructure. We also
+          provide experienced C++ and backend engineers through dedicated
+          engineering teams and staff-augmentation engagements.
         </motion.p>
 
         <motion.div
@@ -87,7 +87,7 @@ export function Hero() {
             variant="outline"
             size="lg"
           >
-            Explore Reference Architecture
+            View Reference Architecture
           </ButtonLink>
         </motion.div>
       </div>

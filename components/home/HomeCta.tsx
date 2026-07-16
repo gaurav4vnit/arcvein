@@ -22,9 +22,9 @@ export function HomeCta() {
             </h2>
 
             <p className="mt-6 max-w-3xl text-base leading-7 text-muted sm:text-lg">
-              Whether you need specialist engineers on contract or an
-              engineering partner to deliver a platform, tell us what your team
-              is trying to achieve.
+              Whether you need dedicated engineers on contract, staff
+              augmentation or complete platform delivery, tell us what your
+              organization is trying to achieve.
             </p>
           </div>
 
