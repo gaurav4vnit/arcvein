@@ -370,3 +370,78 @@ export const contactContent = {
     note: "Usually replies within one business day.",
   },
 } as const;
+
+export const engineeringContent = {
+  meta: {
+    title: "Engineering",
+    description:
+      "How ArcVein approaches architecture, performance engineering, distributed systems and AI infrastructure — from experienced engineers who design for the long term.",
+  },
+  hero: {
+    title: "Engineering Beyond Code.",
+    subtitle:
+      "We design systems that remain reliable, maintainable and performant long after deployment.",
+  },
+  architecture: {
+    title: "Architecture",
+    body: [
+      "Good architecture is less about frameworks and more about decisions that still hold when the product grows.",
+      "We start with constraints: traffic patterns, failure modes, team structure and the cost of change. Then we draw clear boundaries, keep interfaces deliberate and avoid complexity that cannot pay for itself.",
+      "The goal is not a perfect diagram. It is a system teams can understand, operate and evolve — without rewriting the core every year.",
+    ],
+  },
+  domains: [
+    {
+      name: "Performance Engineering",
+      headline:
+        "Latency is a product property, not a late-stage optimization.",
+      body: "We treat performance as design work: measuring the path end to end, reducing contention and making the system observable enough to prove where time and resources go.",
+      focus: [
+        "Latency",
+        "Concurrency",
+        "Networking",
+        "Observability",
+        "Performance optimization",
+      ],
+    },
+    {
+      name: "Distributed Systems",
+      headline:
+        "Distributed systems fail in the seams. We design for those seams.",
+      body: "APIs, events and data paths need clear ownership. We build for partial failure, backpressure and recovery — so reliability is an intentional outcome, not a hope.",
+      focus: [
+        "APIs",
+        "Event-driven architecture",
+        "Resilience",
+        "Scalability",
+        "Reliability",
+      ],
+    },
+    {
+      name: "AI Infrastructure",
+      headline: "Production AI is a systems problem before it is a model problem.",
+      body: "We focus on the infrastructure around models: retrieval, inference services, evaluation hooks and operational visibility — so AI capabilities can be shipped and maintained like any other critical path.",
+      focus: [
+        "LLM integration",
+        "RAG",
+        "Inference services",
+        "Vector search",
+        "Production AI platforms",
+      ],
+    },
+  ],
+  principles: {
+    title: "Engineering Principles",
+    items: [
+      { title: "Simplicity wins." },
+      { title: "Measure everything." },
+      { title: "Reliability is non-negotiable." },
+      { title: "Performance is a feature." },
+      { title: "Design for change." },
+    ],
+  },
+  cta: {
+    headline: "Let's solve difficult engineering problems together.",
+    button: "Book a Discovery Call",
+  },
+} as const;
