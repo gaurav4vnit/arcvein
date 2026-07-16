@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Container } from "@/components/ui/Container";
 
 const features = [
@@ -55,7 +57,7 @@ export function OpenSourceEngineering() {
               </div>
 
               <span className="border border-border/70 px-3 py-2 text-xs uppercase tracking-[0.14em] text-muted">
-                In development
+                Open source
               </span>
             </div>
 
@@ -76,9 +78,15 @@ export function OpenSourceEngineering() {
               ))}
             </div>
 
-            <p className="mt-7 text-sm font-medium text-muted">
-              Public GitHub release in preparation.
-            </p>
+            <Link
+              href="https://github.com/gaurav4vnit/AlgoTrade-DeltaExchange"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-7 inline-flex items-center gap-2 text-sm font-medium text-foreground transition-opacity hover:opacity-65"
+            >
+              View on GitHub
+              <span aria-hidden="true">→</span>
+            </Link>
           </article>
         </div>
       </Container>
