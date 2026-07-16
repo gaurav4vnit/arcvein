@@ -9,6 +9,7 @@ import { SiteShell } from "@/components/layout/SiteShell";
 import { createPageMetadata } from "@/lib/metadata";
 import { homeContent } from "@/lib/site";
 import { WhyArcVein } from "@/components/home/WhyArcVein";
+import { ReferenceArchitectures } from "@/components/home/ReferenceArchitectures";
 
 export const metadata: Metadata = createPageMetadata({
   title: homeContent.meta.title,
@@ -26,6 +27,7 @@ export default function Home() {
       <HowWeThink />
       <HowWeWork />
       <Capabilities />
+      <ReferenceArchitectures />
     </SiteShell>
   );
 }
