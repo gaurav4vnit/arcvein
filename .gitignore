@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local audits and backups
+audit-results/
+.arcvein-backups/
+*.backup
+*.bak
+*.old
+*.sprint*
