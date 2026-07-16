@@ -42,7 +42,7 @@ export function Hero() {
             duration: motionDuration.enter,
             ease: motionEase,
           }}
-          className="font-heading text-[clamp(3.25rem,9vw,6.75rem)] font-medium leading-[0.90] tracking-[-0.045em] text-foreground"
+          className="font-heading text-[clamp(3.25rem,9vw,6.75rem)] font-medium leading-[0.92] tracking-[-0.045em] text-foreground"
         >
           <span className="block">Trading Platforms.</span>
           <span className="block">Capital Markets</span>
@@ -62,10 +62,10 @@ export function Hero() {
           }}
           className="mt-9 max-w-[38rem] text-[15px] leading-[1.75] text-muted sm:text-base"
         >
-          ArcVein builds trading platforms and capital-markets technology.
-          We also provide experienced C++ and backend engineers through
-          dedicated teams, embedded project teams and staff-augmentation
-          engagements.
+          ArcVein designs and builds trading platforms, market-data systems,
+          exchange connectivity and capital-markets infrastructure. We also
+          provide experienced C++ and backend engineers through dedicated
+          engineering teams and staff-augmentation engagements.
         </motion.p>
 
         <motion.div

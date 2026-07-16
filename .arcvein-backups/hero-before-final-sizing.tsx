@@ -42,7 +42,7 @@ export function Hero() {
             duration: motionDuration.enter,
             ease: motionEase,
           }}
-          className="font-heading text-[clamp(3.25rem,9vw,6.75rem)] font-medium leading-[0.90] tracking-[-0.045em] text-foreground"
+          className="font-heading text-[clamp(3.25rem,9vw,6.75rem)] font-medium leading-[0.92] tracking-[-0.045em] text-foreground"
         >
           <span className="block">Trading Platforms.</span>
           <span className="block">Capital Markets</span>

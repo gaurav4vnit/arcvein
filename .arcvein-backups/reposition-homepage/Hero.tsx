@@ -6,9 +6,11 @@ import { ArchitectureDiagram } from "@/components/home/ArchitectureDiagram";
 import { ButtonLink } from "@/components/ui/Button";
 import { Section } from "@/components/ui/Section";
 import { motionDelay, motionDuration, motionEase } from "@/lib/motion";
+import { homeContent, siteConfig } from "@/lib/site";
 
 export function Hero() {
   const reduceMotion = useReducedMotion();
+  const { hero } = homeContent;
 
   const initial = reduceMotion ? false : { opacity: 0, y: 12 };
   const animate = { opacity: 1, y: 0 };
@@ -19,37 +21,21 @@ export function Hero() {
       spacing="none"
       labelledBy="home-hero-heading"
       className="flex min-h-[calc(100svh-4.5rem)] flex-col justify-start sm:min-h-[calc(100svh-4.25rem)]"
-      containerClassName="grid flex-1 content-start items-start gap-14 pb-16 pt-10 sm:pb-20 sm:pt-12 lg:grid-cols-2 lg:gap-12 lg:pb-24 lg:pt-14 xl:gap-16"
+      containerClassName="grid flex-1 content-start items-start gap-14 pt-10 pb-16 sm:pt-12 sm:pb-20 lg:grid-cols-2 lg:gap-12 lg:pt-14 lg:pb-24 xl:gap-16"
     >
-      <div className="max-w-2xl">
-        <motion.p
-          initial={initial}
-          animate={animate}
-          transition={{
-            duration: motionDuration.enter,
-            ease: motionEase,
-          }}
-          className="mb-7 text-xs font-medium uppercase tracking-[0.2em] text-muted"
-        >
-          Trading platforms · Capital markets technology
-        </motion.p>
-
+      <div className="max-w-xl">
         <motion.h1
           id="home-hero-heading"
           initial={initial}
           animate={animate}
-          transition={{
-            duration: motionDuration.enter,
-            ease: motionEase,
-          }}
-          className="font-heading text-[clamp(3.25rem,9vw,6.75rem)] font-medium leading-[0.90] tracking-[-0.045em] text-foreground"
+          transition={{ duration: motionDuration.enter, ease: motionEase }}
+          className="font-heading text-[clamp(3.5rem,10.5vw,7.25rem)] font-medium leading-[0.9] tracking-[-0.045em] text-foreground"
         >
-          <span className="block">Trading Platforms.</span>
-          <span className="block">Capital Markets</span>
-          <span className="block">Technology.</span>
-          <span className="mt-2 block text-foreground/70">
-            Dedicated Engineering Teams.
-          </span>
+          {hero.headline.map((line) => (
+            <span key={line} className="block">
+              {line}
+            </span>
+          ))}
         </motion.h1>
 
         <motion.p
@@ -60,12 +46,9 @@ export function Hero() {
             delay: reduceMotion ? 0 : motionDelay.medium,
             ease: motionEase,
           }}
-          className="mt-9 max-w-[38rem] text-[15px] leading-[1.75] text-muted sm:text-base"
+          className="mt-9 max-w-[26rem] text-[15px] leading-[1.7] text-muted sm:text-base"
         >
-          ArcVein builds trading platforms and capital-markets technology.
-          We also provide experienced C++ and backend engineers through
-          dedicated teams, embedded project teams and staff-augmentation
-          engagements.
+          {hero.description}
         </motion.p>
 
         <motion.div
@@ -78,16 +61,15 @@ export function Hero() {
           }}
           className="mt-11 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4"
         >
-          <ButtonLink href="/contact" size="lg">
-            Discuss Your Project
+          <ButtonLink href={siteConfig.links.contact} size="lg">
+            {hero.primaryCta}
           </ButtonLink>
-
           <ButtonLink
-            href="/architectures/low-latency-trading-platform"
+            href={siteConfig.links.services}
             variant="outline"
             size="lg"
           >
-            View Reference Architecture
+            {hero.secondaryCta}
           </ButtonLink>
         </motion.div>
       </div>
