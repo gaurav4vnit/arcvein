@@ -1,96 +1,68 @@
-import { Container } from "@/components/ui/Container";
+import Link from "next/link";
 
-const architectures = [
-  {
-    number: "01",
-    title: "Low-Latency Trading Platform",
-    category: "FinTech systems",
-    description:
-      "A deterministic architecture for market data, strategy execution, risk management and downstream analytics.",
-  },
-  {
-    number: "02",
-    title: "Production AI Platform",
-    category: "AI engineering",
-    description:
-      "A practical architecture for model integration, retrieval, evaluation, observability and secure deployment.",
-  },
-  {
-    number: "03",
-    title: "Distributed Backend Platform",
-    category: "Backend engineering",
-    description:
-      "A resilient service architecture designed around explicit boundaries, asynchronous workflows and operational clarity.",
-  },
-  {
-    number: "04",
-    title: "Real-Time Analytics Platform",
-    category: "Data engineering",
-    description:
-      "A streaming architecture for ingesting, processing, storing and serving high-volume operational data.",
-  },
-];
+import { Container } from "@/components/ui/Container";
 
 export function ReferenceArchitectures() {
   return (
     <section
-      aria-labelledby="reference-architectures-heading"
+      aria-labelledby="reference-architecture-heading"
       className="border-b border-border/60 py-20 sm:py-28"
     >
       <Container>
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <div>
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-              Reference architectures
+              Reference architecture
             </p>
 
             <h2
-              id="reference-architectures-heading"
+              id="reference-architecture-heading"
               className="mt-5 max-w-xl text-3xl font-medium tracking-tight text-foreground sm:text-4xl"
             >
-              How we approach complex engineering systems.
+              See how we reason about production trading systems.
             </h2>
           </div>
 
           <div>
             <p className="max-w-2xl text-lg leading-8 text-muted">
-              Practical system designs that show how we reason about
-              performance, reliability, scale and long-term ownership.
+              Our interactive reference architecture covers market data,
+              strategy execution, order management, risk, exchange
+              connectivity, CPU placement and downstream systems.
             </p>
 
             <p className="mt-5 max-w-2xl leading-7 text-muted">
-              These are engineering reference architectures—not fictional
-              client work or inflated case studies.
+              It is representative engineering work—not a fictional client
+              case study.
             </p>
           </div>
         </div>
 
-        <div className="mt-14 grid border-l border-t border-border/60 md:grid-cols-2">
-          {architectures.map((architecture) => (
-            <article
-              key={architecture.title}
-              className="group border-b border-r border-border/60 p-7 transition-colors hover:bg-foreground/[0.025] sm:p-9"
-            >
-              <div className="flex items-start justify-between gap-6">
-                <span className="text-xs tabular-nums tracking-[0.16em] text-muted/70">
-                  {architecture.number}
-                </span>
+        <Link
+          href="/architectures/low-latency-trading-platform"
+          className="group mt-14 block border border-border/70 p-7 transition duration-200 hover:-translate-y-0.5 hover:border-foreground/30 hover:bg-foreground/[0.025] sm:p-10"
+        >
+          <div className="flex flex-wrap items-start justify-between gap-6">
+            <div>
+              <p className="text-xs uppercase tracking-[0.16em] text-muted/70">
+                Available now
+              </p>
 
-                <span className="text-xs uppercase tracking-[0.16em] text-muted/70">
-                  {architecture.category}
-                </span>
-              </div>
-
-              <h3 className="mt-10 max-w-md text-xl font-medium tracking-tight text-foreground sm:text-2xl">
-                {architecture.title}
+              <h3 className="mt-6 max-w-2xl text-2xl font-medium tracking-tight text-foreground sm:text-3xl">
+                Production-Grade Trading Platform Architecture
               </h3>
 
-              <p className="mt-4 max-w-xl leading-7 text-muted">
-                {architecture.description}
+              <p className="mt-5 max-w-3xl leading-7 text-muted">
+                Explore the deterministic trading path, NUMA and CPU layout,
+                SPSC communication, order lifecycle, pre-trade risk, exchange
+                gateway and asynchronous downstream platform.
               </p>
-            </article>
-          ))}
-        </div>
+            </div>
+
+            <span className="text-sm font-medium text-foreground">
+              Explore architecture <span aria-hidden="true">→</span>
+            </span>
+          </div>
+        </Link>
       </Container>
     </section>
   );

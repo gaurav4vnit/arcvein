@@ -3,21 +3,21 @@ import { Container } from "@/components/ui/Container";
 const principles = [
   {
     number: "01",
-    title: "Engineering first",
+    title: "Trading-domain understanding",
     description:
-      "We prioritise software quality, performance and long-term maintainability.",
+      "We understand market data, order lifecycles, execution workflows, risk controls and the operational realities of trading systems.",
   },
   {
     number: "02",
-    title: "Pragmatic architecture",
+    title: "Engineering-first delivery",
     description:
-      "Every decision balances performance, simplicity and operational clarity.",
+      "Architecture, reliability, performance and maintainability guide our decisions from the beginning.",
   },
   {
     number: "03",
-    title: "Long-term partnership",
+    title: "Flexible engagement",
     description:
-      "We integrate with your team and build software designed to evolve with the product.",
+      "Work with ArcVein through project delivery, embedded engineers or a focused team assembled around your roadmap.",
   },
 ];
 
@@ -38,21 +38,20 @@ export function WhyArcVein() {
               id="why-arcvein-heading"
               className="mt-5 max-w-xl text-3xl font-medium tracking-tight text-foreground sm:text-4xl"
             >
-              Built by engineers for engineering teams.
+              Trading expertise without the weight of a generic consultancy.
             </h2>
           </div>
 
           <div>
             <p className="max-w-2xl text-lg leading-8 text-muted">
-              ArcVein partners with startups and technology companies building
-              AI applications, FinTech platforms and high-performance
-              software.
+              ArcVein combines trading-technology experience with the
+              flexibility of a focused engineering partner.
             </p>
 
             <p className="mt-5 max-w-2xl leading-7 text-muted">
-              We focus on difficult engineering problems with experienced
-              engineers, pragmatic architecture and production-ready software.
-              No inflated claims or unnecessary complexity.
+              Clients can engage us to deliver a system, modernize an existing
+              platform or add experienced C++ and backend engineers directly to
+              their teams.
             </p>
           </div>
         </div>
