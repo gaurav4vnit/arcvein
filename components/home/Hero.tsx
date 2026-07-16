@@ -19,7 +19,7 @@ export function Hero() {
       spacing="none"
       labelledBy="home-hero-heading"
       className="flex min-h-[calc(100svh-4.5rem)] flex-col justify-start sm:min-h-[calc(100svh-4.25rem)]"
-      containerClassName="grid flex-1 content-start items-start gap-14 pb-16 pt-10 sm:pb-20 sm:pt-12 lg:grid-cols-2 lg:gap-12 lg:pb-24 lg:pt-14 xl:gap-16"
+      containerClassName="grid flex-1 content-start items-center gap-14 pb-16 pt-10 sm:pb-20 sm:pt-12 lg:grid-cols-2 lg:gap-12 lg:pb-24 lg:pt-14 xl:gap-16"
     >
       <div className="max-w-2xl">
         <motion.p
@@ -42,14 +42,10 @@ export function Hero() {
             duration: motionDuration.enter,
             ease: motionEase,
           }}
-          className="font-heading text-[clamp(3.25rem,9vw,6.75rem)] font-medium leading-[0.90] tracking-[-0.045em] text-foreground"
+          className="font-heading text-[clamp(3.75rem,8vw,6rem)] font-medium leading-[0.92] tracking-[-0.045em] text-foreground"
         >
-          <span className="block">Trading Platforms.</span>
-          <span className="block">Capital Markets</span>
-          <span className="block">Technology.</span>
-          <span className="mt-2 block text-foreground/70">
-            Dedicated Engineering Teams.
-          </span>
+          <span className="block">Trading</span>
+          <span className="block">Infrastructure.</span>
         </motion.h1>
 
         <motion.p
@@ -60,12 +56,10 @@ export function Hero() {
             delay: reduceMotion ? 0 : motionDelay.medium,
             ease: motionEase,
           }}
-          className="mt-9 max-w-[38rem] text-[15px] leading-[1.75] text-muted sm:text-base"
+          className="mt-8 max-w-[36rem] text-[15px] leading-[1.75] text-muted sm:text-base"
         >
-          ArcVein builds trading platforms and capital-markets technology.
-          We also provide experienced C++ and backend engineers through
-          dedicated teams, embedded project teams and staff-augmentation
-          engagements.
+          Trading platforms, market data, exchange connectivity and dedicated
+          engineering teams for capital-markets organizations.
         </motion.p>
 
         <motion.div
@@ -76,7 +70,7 @@ export function Hero() {
             delay: reduceMotion ? 0 : motionDelay.cta,
             ease: motionEase,
           }}
-          className="mt-11 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4"
+          className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4"
         >
           <ButtonLink href="/contact" size="lg">
             Discuss Your Project
@@ -87,7 +81,7 @@ export function Hero() {
             variant="outline"
             size="lg"
           >
-            View Reference Architecture
+            View Trading Architecture
           </ButtonLink>
         </motion.div>
       </div>
@@ -100,7 +94,7 @@ export function Hero() {
           delay: reduceMotion ? 0 : motionDelay.long,
           ease: motionEase,
         }}
-        className="flex justify-center lg:justify-end lg:pt-2"
+        className="flex justify-center lg:justify-end"
       >
         <ArchitectureDiagram />
       </motion.div>
