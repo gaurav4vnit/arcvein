@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { Capabilities } from "@/components/home/Capabilities";
+import { DedicatedEngineeringTeams } from "@/components/home/DedicatedEngineeringTeams";
 import { Hero } from "@/components/home/Hero";
 import { HomeCta } from "@/components/home/HomeCta";
 import { HowWeWork } from "@/components/home/HowWeWork";
@@ -12,7 +13,7 @@ import { SiteShell } from "@/components/layout/SiteShell";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "ArcVein — Trading Platform Engineering & Engineering Teams",
+  title: "ArcVein — Trading Platforms & Dedicated Engineering Teams",
   description:
     "ArcVein builds trading platforms and capital markets technology, and provides experienced C++ and backend engineers through dedicated-team and staff-augmentation engagements.",
   path: "/",
@@ -24,8 +25,9 @@ export default function Home() {
     <SiteShell>
       <Hero />
       <WhoWeHelp />
-      <WhyArcVein />
+      <DedicatedEngineeringTeams />
       <Capabilities />
+      <WhyArcVein />
       <ReferenceArchitectures />
       <HowWeWork />
       <OpenSourceEngineering />
