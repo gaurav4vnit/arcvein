@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { ArcVeinLogo } from "@/components/brand/ArcVeinLogo";
 import { NavLinks } from "@/components/layout/NavLinks";
 import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/lib/site";
@@ -19,9 +20,10 @@ export function Footer() {
           <div className="max-w-sm">
             <Link
               href="/"
-              className="font-heading text-sm font-normal tracking-tight text-foreground/90 transition-colors duration-200 hover:text-foreground"
+              className="text-foreground/90 transition-colors duration-200 hover:text-foreground"
+              aria-label="ArcVein home"
             >
-              {siteConfig.name}
+              <ArcVeinLogo markClassName="h-8 w-8" wordmarkClassName="text-base" />
             </Link>
             <p className="mt-4 text-[15px] leading-[1.7] text-muted">
               {siteConfig.tagline}
