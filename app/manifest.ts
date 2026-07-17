@@ -8,8 +8,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "Trading platforms, market data infrastructure, exchange connectivity and dedicated engineering teams.",
     start_url: "/",
     display: "standalone",
-    background_color: "#080B10",
-    theme_color: "#080B10",
+    background_color: "#090b10",
+    theme_color: "#090b10",
     categories: ["business", "finance", "technology"],
     icons: [
       {

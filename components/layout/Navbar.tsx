@@ -10,10 +10,10 @@ export function Navbar() {
       <Container className="flex min-h-16 items-center justify-between gap-4 py-3 sm:h-[4.25rem] sm:gap-8 sm:py-0">
         <Link
           href="/"
-          className="shrink-0 text-foreground/90 transition-colors duration-200 hover:text-foreground"
+          className="shrink-0 rounded-sm transition-opacity duration-200 hover:opacity-90"
           aria-label="ArcVein home"
         >
-          <ArcVeinLogo markClassName="h-7 w-7 sm:h-8 sm:w-8" wordmarkClassName="text-[15px] sm:text-base" />
+          <ArcVeinLogo />
         </Link>
 
         <NavLinks

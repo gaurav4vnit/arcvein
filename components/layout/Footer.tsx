@@ -20,10 +20,10 @@ export function Footer() {
           <div className="max-w-sm">
             <Link
               href="/"
-              className="text-foreground/90 transition-colors duration-200 hover:text-foreground"
+              className="inline-flex rounded-sm transition-opacity duration-200 hover:opacity-90"
               aria-label="ArcVein home"
             >
-              <ArcVeinLogo markClassName="h-8 w-8" wordmarkClassName="text-base" />
+              <ArcVeinLogo markClassName="h-8" wordmarkClassName="text-[18px]" />
             </Link>
             <p className="mt-4 text-[15px] leading-[1.7] text-muted">
               {siteConfig.tagline}

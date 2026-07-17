@@ -54,6 +54,14 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: ["/twitter-image"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/arcvein-mark.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/apple-icon", sizes: "180x180", type: "image/png" }],
+  },
+  manifest: "/manifest.webmanifest",
   robots: {
     index: true,
     follow: true,
@@ -71,7 +79,9 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full`}
     >
       <body className="min-h-full flex flex-col">
-        <StructuredData />{children}</body>
+        <StructuredData />
+        {children}
+      </body>
     </html>
   );
 }
