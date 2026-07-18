@@ -14,8 +14,22 @@ type FormStatus =
   | { state: "success"; message: string }
   | { state: "error"; message: string };
 
-export function ContactForm() {
+type ContactFormProps = {
+  consultation?: string;
+};
+
+export function ContactForm({
+  consultation,
+}: ContactFormProps) {
+  const isStrategySession =
+    consultation === "strategy-session";
+
   const [status, setStatus] = useState<FormStatus>({ state: "idle" });
+  const [helpType, setHelpType] = useState(() =>
+    isStrategySession
+      ? "Free 1-Hour Trading Technology Strategy Session"
+      : "",
+  );
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -34,23 +48,19 @@ export function ContactForm() {
         body: JSON.stringify(Object.fromEntries(formData.entries())),
       });
 
-      const result = (await response.json()) as {
-        message?: string;
-        success?: boolean;
-      };
+      const result = await response.json();
 
       if (!response.ok) {
-        throw new Error(
-          result.message ?? "We could not send your enquiry.",
-        );
+        throw new Error(result.message ?? "Unable to send enquiry.");
       }
 
       form.reset();
+      setHelpType("");
 
       setStatus({
         state: "success",
         message:
-          "Thank you. We received your enquiry and will review it carefully.",
+          "Thank you. We received your enquiry and will get back to you shortly.",
       });
     } catch (error) {
       setStatus({
@@ -58,7 +68,7 @@ export function ContactForm() {
         message:
           error instanceof Error
             ? error.message
-            : "Something went wrong. Please try again.",
+            : "Something went wrong.",
       });
     }
   }
@@ -71,13 +81,30 @@ export function ContactForm() {
       onSubmit={handleSubmit}
       aria-label="Contact ArcVein"
     >
+      {isStrategySession && (
+        <div className="rounded-xl border border-primary/20 bg-primary/5 p-6">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
+            Complimentary Consultation
+          </p>
+
+          <h2 className="mt-2 text-2xl font-semibold">
+            Free 1-Hour Trading Technology Strategy Session
+          </h2>
+
+          <p className="mt-3 text-muted leading-7">
+            During this session we&apos;ll discuss your trading platform,
+            architecture, engineering team, exchange connectivity,
+            market data strategy and answer your technical questions.
+          </p>
+        </div>
+      )}
+
       <TextField
         id="name"
         name="name"
         label="Your Name"
         placeholder="John Smith"
         autoComplete="name"
-        maxLength={100}
         required
       />
 
@@ -88,7 +115,6 @@ export function ContactForm() {
         label="Work Email"
         placeholder="john@company.com"
         autoComplete="email"
-        maxLength={200}
         required
       />
 
@@ -96,19 +122,15 @@ export function ContactForm() {
         id="company"
         name="company"
         label="Company"
-        placeholder="Acme AI"
-        autoComplete="organization"
-        maxLength={150}
+        placeholder="Acme Capital"
       />
 
       <TextField
         id="role"
         name="role"
         label="Your Role"
-        placeholder="Founder, CTO, Engineering Manager..."
-        maxLength={150}
+        placeholder="CTO, Founder..."
       />
-
 
       <div>
         <FieldLabel htmlFor="helpType">How can we help?</FieldLabel>
@@ -117,28 +139,39 @@ export function ContactForm() {
           id="helpType"
           name="helpType"
           required
-          defaultValue=""
-          className="w-full rounded-md border border-foreground/15 bg-background px-4 py-3 text-[15px] text-foreground transition-[border-color,box-shadow] duration-200 hover:border-foreground/25 focus-visible:border-primary/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          value={helpType}
+          onChange={(e) => setHelpType(e.target.value)}
+          className="w-full rounded-md border border-foreground/15 bg-background px-4 py-3"
         >
-          <option value="" disabled>
-            Select an engagement
+          <option value="">Select an engagement</option>
+
+          <option value="Free 1-Hour Trading Technology Strategy Session">
+            Free 1-Hour Trading Technology Strategy Session
           </option>
+
           <option value="Dedicated engineering team">
             Dedicated engineering team
           </option>
+
           <option value="Staff augmentation">
             Staff augmentation
           </option>
+
           <option value="Trading platform development">
             Trading platform development
           </option>
+
           <option value="Architecture review">
             Trading architecture review
           </option>
+
           <option value="Platform modernization">
             Trading platform modernization
           </option>
-          <option value="Other">Other</option>
+
+          <option value="Other">
+            Other
+          </option>
         </select>
       </div>
 
@@ -147,7 +180,6 @@ export function ContactForm() {
         name="team"
         label="Engineering Team Size"
         placeholder="5 engineers"
-        maxLength={100}
       />
 
       <TextField
@@ -155,27 +187,14 @@ export function ContactForm() {
         name="timeline"
         label="Expected Timeline"
         placeholder="ASAP / 2 months / Exploring"
-        maxLength={150}
       />
-
-      <div className="hidden" aria-hidden="true">
-        <label htmlFor="website">Website</label>
-        <input
-          id="website"
-          name="website"
-          type="text"
-          tabIndex={-1}
-          autoComplete="off"
-        />
-      </div>
 
       <TextArea
         id="project"
         name="project"
         rows={8}
         label="Tell us about your project"
-        placeholder="Describe your product, engineering challenge, technical goals and what success looks like."
-        maxLength={5000}
+        placeholder="Describe your project..."
         required
       />
 
@@ -185,35 +204,8 @@ export function ContactForm() {
         className="w-full"
         disabled={submitting}
       >
-        {submitting ? "Sending enquiry..." : "Send project enquiry"}
+        {submitting ? "Sending..." : "Send Enquiry"}
       </Button>
-
-      <div aria-live="polite" aria-atomic="true">
-        {status.state === "success" ? (
-          <div
-            role="status"
-            className="border border-emerald-400/25 bg-emerald-400/[0.04] p-4 text-sm leading-6 text-emerald-200"
-          >
-            {status.message}
-          </div>
-        ) : null}
-
-        {status.state === "error" ? (
-          <div
-            role="alert"
-            className="border border-red-400/25 bg-red-400/[0.04] p-4 text-sm leading-6 text-red-200"
-          >
-            {status.message} You may also email{" "}
-            <a
-              href="mailto:hello@arcvein.com"
-              className="underline underline-offset-4"
-            >
-              hello@arcvein.com
-            </a>
-            .
-          </div>
-        ) : null}
-      </div>
     </form>
   );
 }

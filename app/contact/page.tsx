@@ -12,11 +12,16 @@ export const metadata: Metadata = createPageMetadata({
   path: "/contact",
 });
 
-export default function ContactPage() {
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ consultation?: string }>;
+}) {
+  const params = await searchParams;
   return (
     <SiteShell>
       <ContactHero />
-      <ContactPanel />
+      <ContactPanel consultation={params.consultation} />
     </SiteShell>
   );
 }

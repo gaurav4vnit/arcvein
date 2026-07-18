@@ -46,7 +46,13 @@ const bestFit = [
   "Cloud and platform engineering",
 ];
 
-export function ContactPanel() {
+type ContactPanelProps = {
+  consultation?: string;
+};
+
+export function ContactPanel({
+  consultation,
+}: ContactPanelProps) {
   return (
     <Section
       bordered
@@ -55,7 +61,7 @@ export function ContactPanel() {
     >
       <div className="grid grid-cols-1 gap-16 lg:grid-cols-[1fr_0.92fr] lg:gap-20 xl:gap-24">
         <div>
-          <ContactForm />
+          <ContactForm consultation={consultation} />
         </div>
 
         <aside className="lg:pt-1" aria-labelledby="contact-process-heading">
